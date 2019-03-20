@@ -18,11 +18,13 @@ spring:
       server:
         git:
           #这是其他项目配置文件的git仓库地址 .git可加可不加
-          uri: https://github.com/xiyimiao/config-server.git
-          username: 765296872@qq.com
+          uri: https://github.com/xiyimiao/spring-config-server-profiles
+          username: xiyimiao
           password: 765296872.l
           #配置仓库路径 –这里写成’{profile}’是为了能让后面的服务在不同环境下动态的去获得相对应的目录下的配置环境
-          searchPaths: '{profile}'
+          #'{application}'根据不同项目名称到对应文件夹下查找配置文件
+          searchPaths: '{application}'
+          clone-on-start: true
 security:
   basic:
     enabled: true
