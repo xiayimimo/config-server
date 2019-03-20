@@ -21,6 +21,8 @@ spring:
           uri: https://github.com/xiyimiao/config-server.git
           username: 765296872@qq.com
           password: 765296872.l
+          #配置仓库路径 –这里写成’{profile}’是为了能让后面的服务在不同环境下动态的去获得相对应的目录下的配置环境
+          searchPaths: '{profile}'
 security:
   basic:
     enabled: true
